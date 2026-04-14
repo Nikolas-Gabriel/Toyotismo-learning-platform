@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz Toyotismo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css?v=2.3">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="logo-animada">Quiz Toyotismo</h1>
+
+  <div id="inicio" class="card animar">
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <h3>Escolha sua turma</h3>
+    <div class="turmas">
+      <button class="turma">1° INFO A</button><button class="turma">1° INFO B</button>
+      <button class="turma">1° ADM A</button><button class="turma">1° ADM B</button>
+      <button class="turma">2° MSI</button><button class="turma">2° RH</button>
+      <button class="turma">3° MSI A</button><button class="turma">3° MSI B</button>
+      <button class="turma">3° RH</button>
+    </div>
+    
+    <p id="msgErro" class="erro-texto hidden">⚠️ Digite seu nome e selecione uma turma!</p>
+    
+    <button id="btnIniciar" class="btn-principal">Começar</button>
+    <button id="btnVerRankingApenas" class="btn-secundario">📊 Ver Ranking Geral</button>
+
+    <footer class="creditos">Desenvolvido por <span id="nameenzocor" style="color: #ff0000;">Enzo Gabriel • 1° INFO B</span></footer>
+  </div>
+
+  <div id="quiz" class="hidden card animar">
+    <div id="topo">
+      <div class="progresso"><div id="barra"></div></div>
+      <div style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 10px; font-weight: bold;">
+        <span id="contador">Questão 1/7</span>
+        <span id="timer" style="color: #ff0000;">⏱️ 00:00</span>
+      </div>
+    </div>
+    <h2 id="pergunta"></h2>
+    <div id="respostas"></div>
+    </div>
+
+  <div id="resultado" class="hidden"></div>
+</div>
+
+<script type="module" src="script.js?v=2.3"></script>
+</body>
+</html>

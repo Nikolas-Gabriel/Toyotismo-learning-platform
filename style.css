@@ -1,0 +1,60 @@
+body {
+  margin: 0; font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a0000);
+  color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh;
+  padding: 10px;
+}
+.container { width: 100%; max-width: 900px; text-align: center; }
+
+.card {
+  background: rgba(20, 20, 20, 0.95); padding: 25px; border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 1px solid #333; margin-bottom: 20px;
+}
+
+button {
+  width: 100%; padding: 14px; border: none; border-radius: 12px;
+  background: #1a1a1a; color: white; cursor: pointer; font-weight: bold;
+  transition: 0.3s; margin-top: 10px; border: 1px solid #333; font-size: 16px;
+}
+button:hover:not(:disabled) { border-color: #ff0000; transform: translateY(-2px); }
+
+.btn-principal { background: #b30000; border: none; }
+.btn-secundario { background: #1a1a1a; color: #888; }
+
+.certa { background: #28a745 !important; border-color: #28a745 !important; }
+.errada { background: #dc3545 !important; border-color: #dc3545 !important; }
+
+#nome {
+  width: 100%; padding: 12px; background: #000; color: white;
+  border: 1px solid #333; border-radius: 8px; margin-bottom: 15px; box-sizing: border-box;
+}
+
+.turmas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 15px; }
+.turma.ativa { background: #222; border-color: #ff0000; color: #ff0000; }
+
+.erro-texto { color: #ff4444; font-size: 14px; margin: 10px 0; font-weight: bold; }
+
+#telaRanking { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.full-width { grid-column: 1 / -1; }
+
+.linha-ranking {
+  display: flex; justify-content: space-between; background: #000;
+  padding: 12px; margin: 6px 0; border-radius: 10px; border-left: 4px solid #ff0000;
+}
+
+.canvas-wrapper { position: relative; height: 300px; width: 100%; margin: 15px 0; }
+
+.progresso { width: 100%; background: #222; height: 10px; border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+#barra { height: 100%; width: 0%; background: #ff0000; transition: width 0.6s; }
+
+/* AJUSTES MOBILE */
+@media (max-width: 650px) {
+  #telaRanking { grid-template-columns: 1fr; }
+  .turmas { grid-template-columns: repeat(2, 1fr); }
+  .card { padding: 15px; }
+  .canvas-wrapper { height: 220px; }
+}
+
+.hidden { display: none !important; }
+.animar { animation: fadeInUp 0.5s ease-out; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
